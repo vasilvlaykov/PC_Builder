@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CheckGoogle"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:id="@+id/topside"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="20">
+
+        <TextView
+            android:id="@+id/tvtop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:text="Check this item"
+            android:textStyle="bold"
+            android:layout_margin="4dp"
+            android:paddingVertical="5dp"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textColor="#E1FFFFFF"
+            android:background="@drawable/border_for_total_price"/>
+
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/my_web_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topside"
+        android:background="#CCCCCC"/>
+
+</RelativeLayout>

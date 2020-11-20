@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCCCCC">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="4dp"
+        android:isScrollContainer="true"
+        android:orientation="vertical"
+        android:paddingBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="20">
+
+            <TextView
+                android:id="@+id/tvtop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:text="Your Build"
+                android:textStyle="bold"
+                android:layout_margin="4dp"
+                android:paddingVertical="5dp"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:textColor="#E1FFFFFF"
+                android:background="@drawable/border_for_total_price"/>
+
+            <ImageButton
+                android:id="@+id/goToMenu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="4dp"
+                android:layout_toRightOf="@+id/tvtop"
+                android:layout_weight="16"
+                android:background="@drawable/border_for_total_price"
+                android:src="@android:drawable/ic_menu_revert" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:padding="4dp"
+            android:background="@drawable/border_for_items"
+            android:onClick="searchCpu">
+
+            <ImageView
+                android:id="@+id/CPUImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="2dp"
+                android:src="@drawable/cpu" />
+
+            <TextView
+                android:id="@+id/CPUName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="3dp"
+                android:layout_toEndOf="@+id/CPUImage"
+                android:layout_toRightOf="@+id/CPUImage"
+                android:text="CPU Model"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/CPUPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/CPUImage"
+                android:layout_toEndOf="@+id/eCPU"
+                android:layout_toRightOf="@id/eCPU"
+                android:text="Price:"
+                android:textColor="#6A6A6A"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/eCPU"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/CPUImage"
+                android:layout_marginLeft="270dp"
+                android:text="€"
+                android:textColor="#6A6A6A"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:padding="4dp"
+            android:background="@drawable/border_for_items"
+            android:onClick="searchGpu">
+
+            <ImageView
+                android:id="@+id/GPUImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="2dp"
+                android:src="@drawable/gpu" />
+
+            <TextView
+                android:id="@+id/GPUName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="3dp"
+                android:layout_toEndOf="@+id/GPUImage"
+                android:layout_toRightOf="@+id/GPUImage"
+                android:text="CPU Model"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/GPUPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/GPUImage"
+                android:layout_toEndOf="@+id/eGPU"
+                android:layout_toRightOf="@id/eGPU"
+                android:text="Price:"
+                android:textColor="#6A6A6A"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/eGPU"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/GPUImage"
+                android:layout_marginLeft="270dp"
+                android:text="€"
+                android:textColor="#6A6A6A"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:padding="4dp"
+            android:background="@drawable/border_for_items"
+            android:onClick="searchMtb">
+
+            <ImageView
+                android:id="@+id/MTBImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="2dp"
+                android:src="@drawable/mtb" />
+
+            <TextView
+                android:id="@+id/MTBName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="3dp"
+                android:layout_toEndOf="@+id/MTBImage"
+                android:layout_toRightOf="@+id/MTBImage"
+                android:text="CPU Model"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/MTBPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/MTBImage"
+                android:layout_toEndOf="@+id/eMTB"
+                android:layout_toRightOf="@id/eMTB"
+                android:text="Price:"
+                android:textColor="#6A6A6A"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/eMTB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/MTBImage"
+                android:layout_marginLeft="270dp"
+                android:text="€"
+                android:textColor="#6A6A6A"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:padding="4dp"
+            android:background="@drawable/border_for_items"
+            android:onClick="searchRam">
+
+            <ImageView
+                android:id="@+id/RAMImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="2dp"
+                android:src="@drawable/ram" />
+
+            <TextView
+                android:id="@+id/RAMName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="3dp"
+                android:layout_toEndOf="@+id/RAMImage"
+                android:layout_toRightOf="@+id/RAMImage"
+                android:text="CPU Model"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/RAMPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/RAMImage"
+                android:layout_toEndOf="@+id/eRAM"
+                android:layout_toRightOf="@id/eRAM"
+                android:text="Price:"
+                android:textColor="#6A6A6A"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/eRAM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/RAMImage"
+                android:layout_marginLeft="270dp"
+                android:text="€"
+                android:textColor="#6A6A6A"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:padding="4dp"
+            android:background="@drawable/border_for_items"
+            android:onClick="searchSsd">
+
+            <ImageView
+                android:id="@+id/SSDImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="2dp"
+                android:src="@drawable/ssd" />
+
+            <TextView
+                android:id="@+id/SSDName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="3dp"
+                android:layout_toEndOf="@+id/SSDImage"
+                android:layout_toRightOf="@+id/SSDImage"
+                android:text="CPU Model"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/SSDPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/SSDImage"
+                android:layout_toEndOf="@+id/eSSD"
+                android:layout_toRightOf="@id/eSSD"
+                android:text="Price:"
+                android:textColor="#6A6A6A"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/eSSD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/SSDImage"
+                android:layout_marginLeft="270dp"
+                android:text="€"
+                android:textColor="#6A6A6A"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:padding="4dp"
+            android:background="@drawable/border_for_items"
+            android:onClick="searchHdd">
+
+            <ImageView
+                android:id="@+id/HDDImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="2dp"
+                android:src="@drawable/hdd" />
+
+            <TextView
+                android:id="@+id/HDDName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="3dp"
+                android:layout_toEndOf="@+id/HDDImage"
+                android:layout_toRightOf="@+id/HDDImage"
+                android:text="CPU Model"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/HDDPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/HDDImage"
+                android:layout_toEndOf="@+id/eHDD"
+                android:layout_toRightOf="@id/eHDD"
+                android:text="Price:"
+                android:textColor="#6A6A6A"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/eHDD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/HDDImage"
+                android:layout_marginLeft="270dp"
+                android:text="€"
+                android:textColor="#6A6A6A"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:padding="4dp"
+            android:background="@drawable/border_for_items"
+            android:onClick="searchCool">
+
+            <ImageView
+                android:id="@+id/CoolantImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="2dp"
+                android:src="@drawable/cooland" />
+
+            <TextView
+                android:id="@+id/CoolantName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="3dp"
+                android:layout_toEndOf="@+id/CoolantImage"
+                android:layout_toRightOf="@+id/CoolantImage"
+                android:text="CPU Model"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/CoolantPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/CoolantImage"
+                android:layout_toEndOf="@+id/eCoolant"
+                android:layout_toRightOf="@id/eCoolant"
+                android:text="Price:"
+                android:textColor="#6A6A6A"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/eCoolant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/CoolantImage"
+                android:layout_marginLeft="270dp"
+                android:text="€"
+                android:textColor="#6A6A6A"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:padding="4dp"
+            android:background="@drawable/border_for_items"
+            android:onClick="searchPower">
+
+            <ImageView
+                android:id="@+id/PowerSupplyImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="2dp"
+                android:src="@drawable/power" />
+
+            <TextView
+                android:id="@+id/PowerSupplyName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="3dp"
+                android:layout_toEndOf="@+id/PowerSupplyImage"
+                android:layout_toRightOf="@+id/PowerSupplyImage"
+                android:text="CPU Model"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/PowerSupplyPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/PowerSupplyImage"
+                android:layout_toEndOf="@+id/ePowerSupply"
+                android:layout_toRightOf="@id/ePowerSupply"
+                android:text="Price:"
+                android:textColor="#6A6A6A"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/ePowerSupply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/PowerSupplyImage"
+                android:layout_marginLeft="270dp"
+                android:text="€"
+                android:textColor="#6A6A6A"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:padding="4dp"
+            android:background="@drawable/border_for_items"
+            android:onClick="searchCase">
+
+            <ImageView
+                android:id="@+id/PcCaseImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="2dp"
+                android:src="@drawable/pcase" />
+
+            <TextView
+                android:id="@+id/PcCaseName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="3dp"
+                android:layout_toEndOf="@+id/PcCaseImage"
+                android:layout_toRightOf="@+id/PcCaseImage"
+                android:text="CPU Model"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/PcCasePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/PcCaseImage"
+                android:layout_toEndOf="@+id/ePcCase"
+                android:layout_toRightOf="@id/ePcCase"
+                android:text="Price:"
+                android:textColor="#6A6A6A"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/ePcCase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/PcCaseImage"
+                android:layout_marginLeft="270dp"
+                android:text="€"
+                android:textColor="#6A6A6A"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="10dp"
+            android:background="?android:attr/listDivider" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:layout_marginVertical="8dp"
+            android:padding="4dp"
+            android:background="@drawable/border_for_total_price">
+
+            <ImageView
+                android:id="@+id/TotalPriceImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="2dp" />
+
+            <TextView
+                android:id="@+id/TotalPriceName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="3dp"
+                android:layout_toEndOf="@+id/TotalPriceImage"
+                android:layout_toRightOf="@+id/TotalPriceImage"
+                android:gravity="center"
+                android:text="Total price:"
+                android:textColor="@android:color/black"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/TotalPricePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/eTotalPrice"
+                android:layout_toRightOf="@id/eTotalPrice"
+                android:text="Price:"
+                android:textColor="#494949"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/eTotalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="270dp"
+                android:text="€"
+                android:textColor="#494949"
+                android:textSize="22sp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>
